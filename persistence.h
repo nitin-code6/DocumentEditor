@@ -1,9 +1,9 @@
 #ifndef SAVETODB_H
 #define SAVETODB_H
 class Document;
-class SaveToDB{
+class Persistence{
     public:
-    void save(Document* doc);
+    virtual void save(Document *doc)=0;
 };
 
 #endif
