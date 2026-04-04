@@ -256,7 +256,7 @@ This project helps you understand:
 
 ---
 
-## 👨 Author
+##  Author
 
 **Nitin Kumar**
 
