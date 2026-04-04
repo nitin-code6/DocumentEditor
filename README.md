@@ -1,4 +1,4 @@
-# 📄 Document Editor (C++)
+#  Document Editor (C++)
 
 ![C++](https://img.shields.io/badge/language-C%2B%2B-blue)
 ![Design](https://img.shields.io/badge/design-SOLID%20%7C%20Patterns-green)
@@ -10,7 +10,7 @@ A modular **CLI-based Document Editor** built in C++ to demonstrate **clean arch
 
 ---
 
-## 🚀 Features
+##  Features
 
 * Add elements:
 
@@ -23,7 +23,7 @@ A modular **CLI-based Document Editor** built in C++ to demonstrate **clean arch
 
 ---
 
-## 🧠 Why this project?
+##  Why this project?
 
 Typical beginner code:
 
@@ -47,9 +47,9 @@ Extensibility ✔️
 
 ---
 
-## 🧩 SOLID Principles (Clear & Practical)
+##  SOLID Principles (Clear & Practical)
 
-### 🔹 SRP — Single Responsibility Principle
+###  SRP — Single Responsibility Principle
 
 **One class → One job**
 
@@ -57,12 +57,12 @@ Extensibility ✔️
 * `DocumentElement` → defines rendering
 * `Persistence` → handles saving
 
-👉 Why?
+ Why?
 Avoids “God classes” and makes code easy to modify.
 
 ---
 
-### 🔹 OCP — Open/Closed Principle
+###  OCP — Open/Closed Principle
 
 **Extend without modifying existing code**
 
@@ -78,24 +78,24 @@ Add new types:
 * `ImageElement`
 * `VideoElement`
 
-👉 No change in old code ✔️
+ No change in old code 
 
 ---
 
-### 🔹 LSP — Liskov Substitution Principle
+###  LSP — Liskov Substitution Principle
 
 **Child should behave like parent**
 
 ```cpp
 DocumentElement* el = new TextElement();
-el->render();   // works ✔️
+el->render();   // works 
 ```
 
-👉 Enables safe polymorphism
+ Enables safe polymorphism
 
 ---
 
-### 🔹 ISP — Interface Segregation Principle
+###  ISP — Interface Segregation Principle
 
 **Small, focused interfaces**
 
@@ -105,33 +105,33 @@ class Persistence {
 };
 ```
 
-👉 No unnecessary methods
+ No unnecessary methods
 
 ---
 
-### 🔹 DIP — Dependency Inversion Principle
+###  DIP — Dependency Inversion Principle
 
 **Depend on abstraction, not concrete**
 
 ```cpp
-Persistence* strategy;   // ✔️
+Persistence* strategy;   // 
 ```
 
 NOT:
 
 ```cpp
-SaveToFile*   // ❌
+SaveToFile*   // 
 ```
 
-👉 Easily switch saving logic (file, DB, cloud)
+ Easily switch saving logic (file, DB, cloud)
 
 ---
 
-## 🧠 Design Patterns Used
+##  Design Patterns Used
 
 ---
 
-### ✅ Strategy Pattern
+###  Strategy Pattern
 
 **Problem:** Multiple ways to save data
 **Solution:** Define a common interface
@@ -146,11 +146,11 @@ SaveToFile*   // ❌
 DocumentEditor → Persistence → SaveToFile
 ```
 
-👉 Change behavior without modifying code
+ Change behavior without modifying code
 
 ---
 
-### ✅ Simple Factory Pattern
+###  Simple Factory Pattern
 
 **Problem:** Avoid direct object creation (`new`) in main
 
@@ -158,19 +158,19 @@ DocumentEditor → Persistence → SaveToFile
 PersistenceFactory::createSaver("file");
 ```
 
-👉 Centralized creation
-👉 Cleaner and decoupled code
+ Centralized creation
+ Cleaner and decoupled code
 
 ---
 
-## 🏗️ Project Structure
+##  Project Structure
 
-### 📁 Visual Structure
+###  Visual Structure
 
 ![File Structure](assets/FileStructure.png)
 
 <details>
-<summary>📄 View text structure</summary>
+<summary> View text structure</summary>
 
 ```
 DocumentEditor/
@@ -200,21 +200,21 @@ DocumentEditor/
 
 ---
 
-## 🔁 System Flow
+##  System Flow
 
 ![Sequence Diagram](assets/SequenceDiagram.png)
 
 ---
 
-## 🖥️ How to Run
+##  How to Run
 
-### 🔧 Compile
+###  Compile
 
 ```
 g++ *.cpp -o main.exe
 ```
 
-### ▶️ Run
+###  Run
 
 ```
 main.exe
@@ -222,7 +222,7 @@ main.exe
 
 ---
 
-## 💻 CLI Preview
+### CLI Preview
 
 ```
 ---- Document Editor ----
@@ -236,7 +236,7 @@ main.exe
 
 ---
 
-## 🔮 Future Improvements
+##  Future Improvements
 
 * Undo/Redo (Command Pattern)
 * Smart pointers (memory safety)
@@ -245,7 +245,7 @@ main.exe
 
 ---
 
-## 🎯 Learning Outcome
+##  Learning Outcome
 
 This project helps you understand:
 
@@ -256,10 +256,8 @@ This project helps you understand:
 
 ---
 
-## 👨‍💻 Author
+## 👨 Author
 
 **Nitin Kumar**
 
 ---
-
-⭐ If you found this helpful, consider starring the repo!
